@@ -636,8 +636,8 @@ const Portfolio = () => {
               <div key={project.id} className="group bg-white rounded-none overflow-hidden border-2 border-slate-200 hover:border-[#3356a6] hover:shadow-2xl transition-all duration-500 relative">
                 {/* Corner decoration */}
                 <div className="absolute -top-2 -right-2 w-16 h-16 bg-[#3356a6]/10 -z-10 group-hover:w-20 group-hover:h-20 transition-all duration-500"></div>
-                <div className="h-56 overflow-hidden relative">
-                  <img src={project.image} alt={project.name} className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" />
+                <div className="h-80 overflow-hidden relative p-4 bg-white flex items-center justify-center">
+                  <img src={project.image} alt={project.name} className="max-w-full max-h-full object-contain group-hover:scale-105 transition-all duration-700" />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent"></div>
                   {/* Role badge */}
                   <div className="absolute top-4 right-4 px-4 py-2 bg-white/95 backdrop-blur-sm text-[10px] font-black uppercase tracking-widest shadow-lg flex items-center gap-2 group-hover:scale-105 transition-transform" style={{ color: ACCENT_COLOR }}>

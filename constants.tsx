@@ -61,14 +61,14 @@ export const COMPLETED_PROJECTS: Project[] = [
     name: 'شركة الأصول بلس للاستثمار',
     role: 'وسيط مشاريع',
     description: 'مشروع مصنع وتوريد وتركيب أثاث للفنادق والمكاتب',
-    image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=800'
+    image: '/شركة الأصول بلس للاستثمار.png'
   },
   {
     id: 'p2',
     name: 'شركة تسنم للمقاولات',
     role: 'وسيط عقاري',
     description: 'مشروع صناعية العسيلة – مكة المكرمة',
-    image: 'https://images.unsplash.com/photo-1541888946425-d81bb19480c5?auto=format&fit=crop&q=80&w=800'
+    image: '/شركة تسنم للمقاولات.png'
   },
   {
     id: 'p3',
@@ -82,14 +82,14 @@ export const COMPLETED_PROJECTS: Project[] = [
     name: 'شركة تقدير الحوادث',
     role: 'إدارة الصيانة والتشغيل',
     description: 'المشروع الرئيسي – مكة المكرمة',
-    image: 'https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&q=80&w=800'
+    image: '/شركة تقدير الحوادث.png'
   },
   {
     id: 'p5',
     name: 'شركات الحج والعمرة',
     role: 'خدمات عقارية',
     description: 'تقديم حلول إسكانية متكاملة لخدمة ضيوف الرحمن',
-    image: 'https://images.unsplash.com/photo-1565552130639-d41557d38f16?auto=format&fit=crop&q=80&w=800'
+    image: '/شركات الحج والعمرة.png'
   }
 ];
 
