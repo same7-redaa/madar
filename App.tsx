@@ -153,7 +153,7 @@ const Navbar = () => {
     <nav className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'glass py-2 md:py-3 border-b border-black/5' : 'bg-transparent py-3 md:py-5'}`}>
       <div className="container mx-auto px-6 flex justify-between items-center">
         <div className="flex items-center gap-2">
-          <img src="./logoo.svg" alt="مدار الخليج العقاري" className="w-10 h-10" />
+          <img src="/logoo.svg" alt="مدار الخليج العقاري" className="w-10 h-10" />
           <div className="flex flex-col">
             <span className="text-xl font-bold tracking-tight text-slate-800">مدار الخليج</span>
             <span className="text-[10px] font-bold uppercase tracking-widest" style={{ color: ACCENT_COLOR }}>العقاري</span>
@@ -228,7 +228,7 @@ const Hero = () => {
       <div className="absolute top-0 left-0 w-full h-full opacity-[0.03] pointer-events-none topographic-bg"></div>
       {/* Watermark Logo */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] opacity-[0.03] pointer-events-none -z-10">
-        <img src="./logoo.svg" alt="" className="w-full h-full object-contain" />
+        <img src="/logoo.svg" alt="" className="w-full h-full object-contain" />
       </div>
       <div className="absolute top-0 right-0 w-1/3 h-full bg-[#3356a6]/5 -z-10 blur-3xl"></div>
       <div className="absolute top-20 left-10 w-72 h-72 bg-[#3356a6]/10 rounded-full blur-3xl -z-10"></div>
@@ -270,7 +270,7 @@ const Hero = () => {
         <div className={`relative hidden md:block transition-all duration-1000 delay-700 z-0 ${isLoaded ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-12'}`}>
           <div className="relative rounded-none overflow-hidden border-8 border-white shadow-2xl transform hover:scale-[1.01] transition-all duration-500 max-h-[500px]">
              <img 
-               src="./Gemini_Generated_Image_puaukxpuaukxpuau.png" 
+               src="/Gemini_Generated_Image_puaukxpuaukxpuau.png" 
                alt="Luxury Real Estate" 
                className="w-full h-full object-cover transition-all duration-700"
              />
@@ -377,7 +377,7 @@ const About = () => {
       <div className="absolute top-0 left-0 w-full h-full opacity-[0.03] pointer-events-none" style={{backgroundImage: "url(\"data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%233356a6' fill-opacity='1'%3E%3Cpath d='M20 10h8v8h-8zM20 26h8v8h-8zM36 10h8v8h-8zM52 10h8v8h-8zM52 26h8v8h-8z'/%3E%3Cpath d='M24 6l4 4h-8zM40 6l4 4h-8zM56 6l4 4h-8z'/%3E%3C/g%3E%3C/svg%3E\")"}}></div>
       {/* Watermark Logo */}
       <div className="absolute top-1/2 right-20 -translate-y-1/2 w-[400px] h-[400px] opacity-[0.02] pointer-events-none -z-10">
-        <img src="./logoo.svg" alt="" className="w-full h-full object-contain" />
+        <img src="/logoo.svg" alt="" className="w-full h-full object-contain" />
       </div>
       <div className="absolute top-20 right-0 w-1/2 h-96 bg-gradient-to-l from-[#3356a6]/10 to-transparent blur-3xl -z-10"></div>
       <div className="absolute bottom-20 left-0 w-1/2 h-96 bg-gradient-to-r from-blue-500/10 to-transparent blur-3xl -z-10"></div>
@@ -393,7 +393,7 @@ const About = () => {
           <div className={`order-2 md:order-1 relative transition-all duration-1000 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-12'}`}>
             <div className="aspect-[4/5] rounded-none overflow-hidden border-4 border-white relative shadow-2xl">
                <img 
-                 src="./Gemini_Generated_Image_3eop8k3eop8k3eop.png" 
+                 src="/Gemini_Generated_Image_3eop8k3eop8k3eop.png" 
                  alt="Our Strategy" 
                  className="w-full h-full object-cover"
                />
@@ -444,21 +444,21 @@ const Certificates = () => {
       id: 1,
       title: 'شهادة السجل التجاري',
       number: '7051545288',
-      image: 'شهادة السجل التجاري.jpg',
+      image: '/شهادة السجل التجاري.jpg',
       description: 'سجل تجاري معتمد من وزارة التجارة'
     },
     {
       id: 2,
       title: 'شهادة العضوية',
       number: 'EJAR_33304472',
-      image: 'شهادة عضوية.jpg',
+      image: '/شهادة عضوية.jpg',
       description: 'عضو معتمد في شبكة إيجار'
     },
     {
       id: 3,
       title: 'شهادة فال',
       number: '1200041182',
-      image: 'شهادة فال.jpg',
+      image: '/شهادة فال.jpg',
       description: 'رخصة فال للوساطة العقارية'
     }
   ];
@@ -469,7 +469,7 @@ const Certificates = () => {
       <div className="absolute top-0 left-0 w-full h-full opacity-[0.015] pointer-events-none" style={{backgroundImage: "url(\"data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%233356a6' fill-opacity='1'%3E%3Crect x='20' y='20' width='30' height='40' fill='none' stroke='%233356a6' stroke-width='1'/%3E%3Cpath d='M25 28h20M25 32h20M25 36h15' stroke='%233356a6' stroke-width='0.5'/%3E%3Ccircle cx='35' cy='50' r='4' fill='none' stroke='%233356a6' stroke-width='1'/%3E%3Cpath d='M30 52l5 3 5-3' fill='none' stroke='%233356a6' stroke-width='0.5'/%3E%3C/g%3E%3C/svg%3E\")"}}></div>
       {/* Watermark Logo */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[450px] h-[450px] opacity-[0.025] pointer-events-none -z-10">
-        <img src="./logoo.svg" alt="" className="w-full h-full object-contain" />
+        <img src="/logoo.svg" alt="" className="w-full h-full object-contain" />
       </div>
       {/* Premium decorative elements */}
       <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-[#3356a6]/5 to-transparent -z-10"></div>
@@ -554,7 +554,7 @@ const Services = () => {
       <div className="absolute top-0 left-0 w-full h-full opacity-[0.02] pointer-events-none" style={{backgroundImage: "url(\"data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%233356a6' fill-opacity='1'%3E%3Cpath d='M25 20h10v15h-10zM25 45h10v15h-10zM45 20h10v15h-10zM65 20h10v15h-10zM65 45h10v15h-10z'/%3E%3Cpath d='M30 15l5 5h-10zM50 15l5 5h-10zM70 15l5 5h-10z'/%3E%3Crect x='27' y='23' width='2' height='3'/%3E%3Crect x='31' y='23' width='2' height='3'/%3E%3Crect x='27' y='28' width='2' height='3'/%3E%3Crect x='31' y='28' width='2' height='3'/%3E%3C/g%3E%3C/svg%3E\")"}}></div>
       {/* Watermark Logo */}
       <div className="absolute bottom-20 left-20 w-[500px] h-[500px] opacity-[0.02] pointer-events-none -z-10">
-        <img src="./logoo.svg" alt="" className="w-full h-full object-contain" />
+        <img src="/logoo.svg" alt="" className="w-full h-full object-contain" />
       </div>
       <div className="absolute top-40 right-20 w-64 h-64 bg-[#3356a6]/5 rounded-full blur-3xl -z-10"></div>
       <div className="absolute bottom-40 left-20 w-80 h-80 bg-blue-500/5 rounded-full blur-3xl -z-10"></div>
@@ -671,7 +671,7 @@ const UpcomingProjects = () => {
       <div className="absolute inset-0 opacity-[0.03]" style={{backgroundImage: "url(\"data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%230d9488' fill-opacity='1'%3E%3Cpath d='M0 0h40v40H0z' fill='none' stroke='%230d9488' stroke-width='1'/%3E%3Cpath d='M10 10h5v5h-5zM25 10h5v5h-5zM10 25h5v5h-5zM25 25h5v5h-5z'/%3E%3Ccircle cx='35' cy='5' r='2'/%3E%3Ccircle cx='5' cy='35' r='2'/%3E%3C/g%3E%3C/svg%3E\")"}}></div>
       {/* Watermark Logo */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] opacity-[0.02] pointer-events-none -z-10">
-        <img src="./logoo.svg" alt="" className="w-full h-full object-contain" />
+        <img src="/logoo.svg" alt="" className="w-full h-full object-contain" />
       </div>
       <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-teal-500/10 rounded-full blur-3xl -z-10"></div>
       <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-emerald-500/10 rounded-full blur-3xl -z-10"></div>
@@ -843,7 +843,7 @@ const Footer = () => {
           <div className="col-span-2 space-y-8">
             <div className="flex items-center gap-4">
               <div className="w-14 h-14 bg-white rounded-none flex items-center justify-center shadow-2xl p-2">
-                <img src="./logoo.svg" alt="مدار الخليج العقاري" className="w-full h-full object-contain" />
+                <img src="/logoo.svg" alt="مدار الخليج العقاري" className="w-full h-full object-contain" />
               </div>
               <div className="flex flex-col">
                 <span className="text-3xl font-black text-white uppercase tracking-tighter">مدار الخليج</span>
