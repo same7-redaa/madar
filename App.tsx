@@ -443,7 +443,7 @@ const Certificates = () => {
     {
       id: 1,
       title: 'شهادة السجل التجاري',
-      number: '7051545288',
+      number: '055 785 6312',
       image: '/شهادة السجل التجاري.jpg',
       description: 'سجل تجاري معتمد من وزارة التجارة'
     },
@@ -782,7 +782,7 @@ const Contact = () => {
               </div>
               <div>
                 <h4 className="font-black text-xl mb-2 text-white uppercase tracking-wide">الموقع</h4>
-                <p className="text-slate-100 text-sm font-medium">مكة المكرمة - وادي جليل - 7221</p>
+                <p className="text-slate-100 text-sm font-medium">حي جبل النور<br/>طريق الملك فيصل بجوار مكتبة جرير<br/>برج برايد اند جوي الدور السادس مكتب 4</p>
               </div>
             </div>
 
@@ -812,7 +812,7 @@ const Contact = () => {
               </div>
               <div>
                 <h4 className="font-black text-xl mb-2 text-white uppercase tracking-wide">البريد الإلكتروني</h4>
-                <p className="text-slate-100 text-sm font-medium break-all" dir="ltr">samehabdealsalam@gmail.com</p>
+                <p className="text-slate-100 text-sm font-medium break-all" dir="ltr">sales@madarelkhalij.com</p>
               </div>
             </div>
 
@@ -860,7 +860,7 @@ const Footer = () => {
               </div>
               <div className="p-4 bg-slate-800 rounded-none border-r-4 flex flex-col items-start min-w-[150px] shadow-xl" style={{ borderRightColor: ACCENT_COLOR }}>
                  <span className="text-[10px] text-slate-500 font-black mb-1 uppercase tracking-widest">السجل التجاري</span>
-                 <span className="text-white font-mono text-sm font-bold">7051545288</span>
+                 <span className="text-white font-mono text-sm font-bold">055 785 6312</span>
               </div>
             </div>
           </div>
