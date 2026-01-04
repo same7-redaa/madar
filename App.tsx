@@ -661,107 +661,87 @@ const Portfolio = () => {
   );
 };
 
-const UnderExecutionProjects = () => {
+const UpcomingProjects = () => {
   const { ref, isVisible } = useScrollAnimation();
 
   return (
-    <section ref={ref} id="under-execution" className="py-32 bg-gradient-to-br from-slate-50 via-gray-50 to-slate-100 relative overflow-hidden">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\")" }}></div>
+    <section ref={ref} id="upcoming" className="py-32 bg-gradient-to-br from-teal-50 via-emerald-50/30 to-cyan-50 relative overflow-hidden">
+      {/* Construction Pattern */}
+      <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%230d9488' fill-opacity='1'%3E%3Cpath d='M0 0h40v40H0z' fill='none' stroke='%230d9488' stroke-width='1'/%3E%3Cpath d='M10 10h5v5h-5zM25 10h5v5h-5zM10 25h5v5h-5zM25 25h5v5h-5z'/%3E%3Ccircle cx='35' cy='5' r='2'/%3E%3Ccircle cx='5' cy='35' r='2'/%3E%3C/g%3E%3C/svg%3E\")" }}></div>
+      {/* Watermark Logo */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] opacity-[0.02] pointer-events-none -z-10">
+        <img src="/logoo.svg" alt="" className="w-full h-full object-contain" />
+      </div>
+      <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-teal-500/10 rounded-full blur-3xl -z-10"></div>
+      <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-emerald-500/10 rounded-full blur-3xl -z-10"></div>
 
       <div className="container mx-auto px-4 sm:px-6">
         <div className={`text-center max-w-4xl mx-auto mb-16 md:mb-20 space-y-6 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}>
-          <div className="inline-block px-6 py-2 rounded-none bg-orange-500/10 border-l-4 border-orange-500 text-orange-600 font-black text-xs uppercase">
-            مشاريع جارية
+          <div className="inline-block px-6 py-2 rounded-none bg-teal-600/10 border-l-4 border-teal-600 text-teal-700 font-black text-xs uppercase">
+            مشاريع المستقبل
           </div>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-slate-900 uppercase">مشاريع تحت التنفيذ</h2>
-          <p className="text-slate-600 text-lg md:text-xl font-medium">نعمل حاليًا على تنفيذ مجموعة من المشاريع النوعية وفق أعلى معايير الجودة</p>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-slate-900 uppercase">قيد التجهيز والتطوير</h2>
+          <p className="text-slate-600 text-lg md:text-xl font-medium">نعمل حاليًا على تطوير وإدارة مجموعة من المشاريع الاستثمارية الواعدة في المنطقة الغربية</p>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mb-12 md:mb-16">
           {UPCOMING_PROJECTS.map((project, idx) => (
-            <div key={project.id} className={`group bg-white rounded-none overflow-hidden border-2 border-slate-200 hover:border-orange-500 hover:shadow-2xl transition-all duration-500 relative ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`} style={{ transitionDelay: `${idx * 150}ms` }}>
-              <div className="absolute top-0 right-0 w-24 h-24 bg-orange-500/10 rounded-bl-full -z-10 transition-transform group-hover:scale-150"></div>
+            <div key={project.id} className={`group bg-white rounded-none overflow-hidden border-2 border-teal-200 hover:border-teal-600 hover:shadow-2xl transition-all duration-500 relative ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`} style={{ transitionDelay: `${idx * 150}ms` }}>
+              {/* Status badge */}
+              <div className="absolute -top-3 -right-3 w-20 h-20 bg-gradient-to-br from-teal-600 to-emerald-600 rotate-45 flex items-center justify-center shadow-xl z-10">
+                <TrendingUp size={16} className="text-white -rotate-45" />
+              </div>
 
-              <div className="p-8 space-y-6">
-                <div className="w-16 h-16 bg-orange-500 rounded-none flex items-center justify-center text-white shadow-lg group-hover:rotate-12 transition-transform duration-300">
-                  <Wrench size={32} />
+              {/* Gradient overlay */}
+              <div className="absolute inset-0 bg-gradient-to-br from-teal-500/5 to-emerald-500/5 opacity-0 group-hover:opacity-100 transition-opacity -z-10"></div>
+
+              {/* Number badge */}
+              <div className="absolute top-6 left-6 w-14 h-14 bg-white border-4 border-teal-600 flex items-center justify-center font-black text-2xl text-teal-600 shadow-lg z-10">
+                {(idx + 1).toString().padStart(2, '0')}
+              </div>
+
+              {/* Icon background */}
+              <div className="h-48 bg-gradient-to-br from-teal-100 to-emerald-100 flex items-center justify-center relative overflow-hidden">
+                <div className="absolute inset-0 opacity-10" style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%230d9488'%3E%3Cpath d='M15 20h10v15h-10z'/%3E%3Cpath d='M20 15l5 5h-10z'/%3E%3Crect x='17' y='23' width='2' height='3'/%3E%3Crect x='21' y='23' width='2' height='3'/%3E%3C/g%3E%3C/svg%3E\")" }}></div>
+                <div className="relative w-24 h-24 bg-white rounded-none shadow-xl flex items-center justify-center group-hover:scale-110 transition-all duration-500">
+                  <Building2 size={48} className="text-teal-600" />
                 </div>
+              </div>
 
-                <div className="space-y-4">
-                  <h4 className="text-2xl font-black text-slate-900 group-hover:text-orange-600 transition-colors uppercase">{project.title}</h4>
-                  <p className="text-slate-600 text-sm leading-relaxed font-medium">{project.description}</p>
-                </div>
+              <div className="p-8 space-y-4">
+                <h4 className="text-2xl font-black text-slate-900 group-hover:text-teal-600 transition-colors uppercase">{project.title}</h4>
+                <p className="text-slate-600 text-sm leading-relaxed font-medium">{project.description}</p>
 
-                <div className="pt-6 border-t border-slate-100 flex items-center justify-between">
-                  <span className="text-xs font-black uppercase text-orange-600">جاري التنفيذ</span>
-                  <div className="w-20 h-2 bg-slate-100 rounded-full overflow-hidden">
-                    <div className="h-full bg-orange-500 w-2/3 animate-pulse"></div>
+                <div className="pt-6 mt-6 border-t-2 border-teal-100 flex items-center justify-between">
+                  <span className="text-xs font-black uppercase text-teal-600">قريبًا</span>
+                  <div className="flex gap-1">
+                    <div className="w-2 h-2 bg-teal-600 rounded-full animate-pulse"></div>
+                    <div className="w-2 h-2 bg-teal-600 rounded-full animate-pulse" style={{ animationDelay: '0.2s' }}></div>
+                    <div className="w-2 h-2 bg-teal-600 rounded-full animate-pulse" style={{ animationDelay: '0.4s' }}></div>
                   </div>
                 </div>
               </div>
             </div>
           ))}
         </div>
-      </div>
-    </section>
-  );
-};
 
-const UnderStudyProjects = () => {
-  const { ref, isVisible } = useScrollAnimation();
-
-  const projects = [
-    {
-      id: 's1',
-      title: 'مزار (Mzar)',
-      description: 'واجهة تجارية وطبية متكاملة، مشروع استثماري متعدد الاستخدامات يجمع بين الأنشطة التجارية، الطبية، والإدارية لتحقيق عائد سنوي مستقر.',
-      image: 'https://i.postimg.cc/mgzt4x7w/mzar.jpg',
-      category: 'تجاري - طبي'
-    },
-    {
-      id: 's2',
-      title: 'نسيم مكة (Naseem Makkah)',
-      description: 'مشروع متعدد الاستخدامات في مكة المكرمة، مبني على دراسة جدوى شاملة، يضم مكاتب إدارية وعيادات طبية ومعارض تجارية ضمن مبنى حديث متكامل.',
-      image: 'https://i.postimg.cc/GhSH63T9/nsym-mkt.jpg',
-      category: 'متعدد الاستخدامات'
-    }
-  ];
-
-  return (
-    <section ref={ref} id="under-study" className="py-32 bg-gradient-to-br from-white via-slate-50 to-blue-50 relative overflow-hidden">
-      {/* Pattern */}
-      <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 20.5V18h2v2.5h-2zM20 23v-2.5h2V23h-2zM20 25.5V23h2v2.5h-2zM20 28V25.5h2V28h-2zM20 30.5V28h2v2.5h-2zM20 33v-2.5h2V33h-2zM20 35.5V33h2v2.5h-2zM20 38V35.5h2V38h-2zM20 40.5V38h2v2.5h-2z' fill='%233356a6' fill-opacity='1' fill-rule='evenodd'/%3E%3C/svg%3E\")" }}></div>
-
-      <div className="container mx-auto px-4 sm:px-6">
-        <div className={`text-center max-w-4xl mx-auto mb-16 md:mb-20 space-y-6 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}>
-          <div className="inline-block px-6 py-2 rounded-none bg-[#3356a6]/10 border-l-4 border-[#3356a6] text-[#3356a6] font-black text-xs uppercase">
-            فرص مستقبلية
-          </div>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-slate-900 uppercase">مشاريع تحت الدراسة</h2>
-          <p className="text-slate-600 text-lg md:text-xl font-medium">فرص استثمارية واعدة تخضع حاليًا للدراسة والتحليل الدقيق</p>
-        </div>
-
-        <div className="grid md:grid-cols-2 gap-12">
-          {projects.map((project, idx) => (
-            <div key={project.id} className={`group relative bg-white border-2 border-slate-100 rounded-none overflow-hidden hover:border-[#3356a6] hover:shadow-2xl transition-all duration-700 ${isVisible ? 'opacity-100 translate-x-0' : idx === 0 ? 'opacity-0 -translate-x-12' : 'opacity-0 translate-x-12'}`}>
-              <div className="aspect-[16/9] overflow-hidden relative">
-                <img src={project.image} alt={project.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent"></div>
-                <div className="absolute top-4 right-4 px-4 py-2 bg-white/95 backdrop-blur-sm shadow-lg text-[#3356a6] font-black text-xs uppercase">
-                  {project.category}
-                </div>
-              </div>
-              <div className="p-8 md:p-10 relative">
-                <h3 className="text-3xl font-black text-slate-900 mb-4 group-hover:text-[#3356a6] transition-colors uppercase">{project.title}</h3>
-                <p className="text-slate-600 leading-relaxed font-medium">{project.description}</p>
-                <div className="mt-8 pt-8 border-t border-slate-100 flex items-center gap-4">
-                  <div className="w-12 h-1 bg-[#3356a6]"></div>
-                  <span className="text-xs font-black uppercase text-[#3356a6]">قيد الدراسة</span>
-                </div>
-              </div>
+        {/* Info Card */}
+        <div className={`max-w-4xl mx-auto bg-gradient-to-r from-teal-600 to-emerald-600 rounded-none p-12 shadow-2xl relative overflow-hidden transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}>
+          <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-0 left-0 w-64 h-64 bg-white/10 rounded-full blur-3xl"></div>
+          <div className="relative flex flex-col md:flex-row items-center gap-8">
+            <div className="flex-shrink-0 w-20 h-20 bg-white rounded-none shadow-xl flex items-center justify-center">
+              <TrendingUp size={40} className="text-teal-600" />
             </div>
-          ))}
+            <div className="flex-1 text-center md:text-right">
+              <h3 className="text-3xl font-black text-white mb-3 uppercase">جاري العمل على 5 مشاريع جديدة</h3>
+              <p className="text-teal-50 text-lg font-medium leading-relaxed">تعمل مؤسسة مدار الخليج العقاري على تطوير وإدارة مجموعة من المشاريع الاستثمارية المبتكرة التي ستسهم في تطوير القطاع العقاري بالمنطقة الغربية</p>
+            </div>
+            <a href="#contact" className="flex-shrink-0 px-8 py-4 bg-white text-teal-600 font-black uppercase hover:bg-teal-50 transition-colors shadow-xl flex items-center gap-3 group">
+              استفسر الآن
+              <ChevronLeft size={20} className="group-hover:translate-x-1 transition-transform" />
+            </a>
+          </div>
         </div>
       </div>
     </section>
@@ -945,8 +925,7 @@ const App: React.FC = () => {
       <About />
       <Services />
       <Portfolio />
-      <UnderExecutionProjects />
-      <UnderStudyProjects />
+      <UpcomingProjects />
       <Certificates />
       <Contact />
       <Footer />
